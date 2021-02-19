@@ -1,0 +1,9 @@
+extends layouts/main-layout.pug
+
+block content
+    h1 Home
+    form(action="/users", method="POST")
+        div
+            label(for="username") Username
+            input(type="text", name="username")#username
+        button(type="submit") Submit

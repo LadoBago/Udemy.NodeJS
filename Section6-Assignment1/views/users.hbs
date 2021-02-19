@@ -1,0 +1,17 @@
+{{#section "styles"}}
+<style>
+    h1 {
+        font-family: sans-serif;
+    }
+</style>
+{{/section}}
+<h1>Users</h1>
+{{#if anyUser}}
+<ul>
+{{#each users}}
+<li>{{this}}</li>
+{{/each}}
+</ul>
+{{else}}
+<p>Empty Users List</p>
+{{/if}}

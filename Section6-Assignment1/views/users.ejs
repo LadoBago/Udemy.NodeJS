@@ -1,0 +1,15 @@
+<%- include('includes/header.ejs') %>
+<%- include('includes/headend-bodystart.ejs') %>
+<%- include('includes/navigation.ejs') %>
+
+<h1>Users</h1>
+<% if (users.length > 0) { %>
+<ul>
+<% for (user of users) {%>
+<li><%=user%></li>
+<% } %>
+</ul>
+<% } else { %>
+<p>Empty Users List</p>   
+<% } %>
+<%- include('includes/footer.ejs') %>
