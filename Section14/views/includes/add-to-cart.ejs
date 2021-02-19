@@ -6,6 +6,7 @@
     id="productId"
     value="<%= product._id %>"
   />
+  <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
   <button class="btn" type="submit">Add to Cart</button>
 </form>
 <% } %>

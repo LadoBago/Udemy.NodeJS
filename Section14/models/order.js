@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 
 const orderSchema = new Schema({
   user: {
-    name: { type: String, require: true },
+    email: { type: String, require: true },
     userId: { type: Schema.Types.ObjectId, ref: "User", require: true },
   },
   products: [
