@@ -3,6 +3,7 @@ const express = require("express");
 
 const shopController = require("../controllers/shop");
 const isAuth = require("../middleware/is-auth");
+const { route } = require("./admin");
 const router = express.Router();
 
 router.get("/", shopController.getIndex);
@@ -17,5 +18,7 @@ router.get("/orders", isAuth, shopController.getOrders);
 router.post("/create-order", isAuth, shopController.postOrder);
 
 // router.get("/checkout", shopController.getCheckout);
+
+router.get("/orders/:orderId", isAuth, shopController.getInvoice);
 
 module.exports = router;
